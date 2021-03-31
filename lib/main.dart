@@ -9,7 +9,7 @@ class home extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "FitStreak",
+          "FitStreak Hey this is Godwin",
               style: TextStyle(
             fontSize: 20.0,
         ),
