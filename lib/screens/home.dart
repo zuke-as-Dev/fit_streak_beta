@@ -33,7 +33,7 @@ class _HomeState extends State<Home> {
                     Navigator.pushNamed(context, '/myplans');
                   },
                       child: Icon(Icons.article_outlined,
-                        color: Colors.deepOrange,
+                        color: Colors.purple,
                         size: 40.0,
                       ))
                 ],
