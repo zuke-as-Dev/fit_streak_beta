@@ -25,7 +25,7 @@ class _HomeState extends State<Home> {
                     Navigator.pushNamed(context, '/menu');
                   },
                       child: Icon(Icons.person,
-                        color: Colors.deepOrange,
+                        color: Colors.purple,
                         size: 40.0,
                       )),
                   SizedBox(width: 130.0),
