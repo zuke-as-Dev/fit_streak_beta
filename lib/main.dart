@@ -1,3 +1,4 @@
+import 'package:fit_streak/myProfile/rate_us.dart';
 import 'package:fit_streak/myProfile/streak.dart';
 import 'package:fit_streak/screens/home.dart';
 import 'package:fit_streak/screens/loading_screen.dart';
@@ -12,7 +13,7 @@ import 'package:fit_streak/myProfile/help.dart';
 import 'package:fit_streak/myProfile/settings.dart';
 
 void main() => runApp(MaterialApp(
-  initialRoute: '/my_profile',
+  initialRoute: '/',
   routes: {
     '/':(context) => loading(),
     '/home':(context) => Home(),
@@ -26,5 +27,6 @@ void main() => runApp(MaterialApp(
     '/app_settings':(context) => settings(),
     '/help':(context) => help(),
     '/points':(context) => user_points(),
+    '/rating':(context) => rate_us(),
   },
 ));

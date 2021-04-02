@@ -14,7 +14,25 @@ class _my_profileState extends State<my_profile> {
       child: new Column(
         children: <Widget>[
           new ListTile(
-            title: TextButton.icon(onPressed: (){},
+            title: TextButton.icon(onPressed: (){
+              Navigator.pushNamed(context, '/user_data');
+            },
+              icon: Icon(Icons.edit,
+                color: Colors.white,
+                size: 40,),
+              label: Text('Edit Profile',
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20.0
+                ),),
+            ),
+
+          ),
+          new Divider(color: Colors.white, indent: 16.0,endIndent: 16.0),
+          new ListTile(
+            title: TextButton.icon(onPressed: (){
+              Navigator.pushNamed(context, '/user_progress');
+            },
               icon: Icon(Icons.bar_chart_rounded,
                 color: Colors.white,
                 size: 40,),
@@ -28,7 +46,9 @@ class _my_profileState extends State<my_profile> {
           ),
           new Divider(color: Colors.white, indent: 16.0,endIndent: 16.0),
           new ListTile(
-            title: TextButton.icon(onPressed: (){},
+            title: TextButton.icon(onPressed: (){
+              Navigator.pushNamed(context, '/calender');
+            },
               icon: Padding(
                 padding: const EdgeInsets.fromLTRB(0,0,20,0),
                 child: Icon(Icons.calendar_today,
@@ -45,7 +65,9 @@ class _my_profileState extends State<my_profile> {
           ),
           new Divider(color: Colors.white, indent: 16.0,endIndent: 16.0),
           new ListTile(
-            title: TextButton.icon(onPressed: (){},
+            title: TextButton.icon(onPressed: (){
+              Navigator.pushNamed(context, '/help');
+            },
               icon: Icon(Icons.info_outline,
                   color: Colors.white,
                   size: 40.0),
@@ -55,6 +77,23 @@ class _my_profileState extends State<my_profile> {
             ),
 
           ),
+          new Divider(color: Colors.white, indent: 16.0,endIndent: 16.0),
+          new ListTile(
+            title: TextButton.icon(onPressed: (){
+              Navigator.pushNamed(context, '/rating');
+            },
+              icon: Icon(Icons.rate_review,
+                color: Colors.white,
+                size: 30,),
+              label: Text('Rate us',
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 15.0
+                ),),
+            ),
+
+          ),
+
         ],
       ),
     );
@@ -110,7 +149,9 @@ class _my_profileState extends State<my_profile> {
               children: [
                 SizedBox(width: 15.0 ),
                 CircleAvatar(
-                  radius: 30.0,
+                  backgroundColor: Colors.transparent,
+                  foregroundImage: AssetImage('assets/fat_simpsons.png'),
+                  radius: 40.0,
                 ),
                 SizedBox(width: 160),
                 Column(
@@ -152,7 +193,7 @@ class _my_profileState extends State<my_profile> {
             Divider(
               color: Colors.black,
             ),
-            SizedBox(height: 40.0,),
+            SizedBox(height: 1.0,),
 
             sizedBox,
           ],
