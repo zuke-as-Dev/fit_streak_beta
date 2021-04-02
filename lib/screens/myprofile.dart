@@ -9,6 +9,62 @@ class my_profile extends StatefulWidget {
 class _my_profileState extends State<my_profile> {
   @override
   Widget build(BuildContext context) {
+    var card = new Card(
+        color: Colors.blue,
+      child: new Column(
+        children: <Widget>[
+          new ListTile(
+            title: TextButton.icon(onPressed: (){},
+              icon: Icon(Icons.bar_chart_rounded,
+              color: Colors.white,
+              size: 40,),
+              label: Text('Progress Stats',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 20.0
+              ),),
+            ),
+
+          ),
+          new Divider(color: Colors.white, indent: 16.0,endIndent: 16.0),
+          new ListTile(
+            title: TextButton.icon(onPressed: (){},
+              icon: Padding(
+                padding: const EdgeInsets.fromLTRB(0,0,20,0),
+                child: Icon(Icons.calendar_today,
+                color: Colors.white,
+                size: 40.0),
+              ),
+              label: Text('Calendar',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 20.0
+              ),),
+            ),
+
+          ),
+          new Divider(color: Colors.white, indent: 16.0,endIndent: 16.0),
+          new ListTile(
+            title: TextButton.icon(onPressed: (){},
+              icon: Icon(Icons.info_outline,
+                  color: Colors.white,
+                  size: 40.0),
+              label: Text('Help',
+              style: TextStyle(fontSize: 20.0,
+              color: Colors.white)),
+            ),
+
+          ),
+        ],
+      ),
+    );
+    final sizedBox = new Container(
+      margin: new EdgeInsets.only(left: 10.0, right: 10.0),
+      child: new SizedBox(
+
+        child: card,
+      ),
+    );
     return Scaffold(
       appBar: AppBar(
         title: Text('My Profile'),
@@ -73,7 +129,8 @@ class _my_profileState extends State<my_profile> {
                             child: Text('130'),
                           )
                         ],
-                      ),                      Column(
+                      ),
+                      Column(
                         children: [
                           Padding(
                             padding: const EdgeInsets.fromLTRB(40,0,0,10),
@@ -95,6 +152,9 @@ class _my_profileState extends State<my_profile> {
                   Divider(
                     color: Colors.black,
                   ),
+                  SizedBox(height: 40.0,),
+
+                  sizedBox,
                 ],
               ),
         ),
