@@ -95,6 +95,18 @@ class _my_profileState extends State<my_profile> {
                   Divider(
                     color: Colors.black,
                   ),
+                  Center(
+                    child: Card(
+                      margin: EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 0),
+                      child: TextButton(
+                        onPressed: (){
+                          Navigator.pushNamed(context, '/user_progress');
+                        },
+                        child: Text('progress report'),
+                      ),
+
+                    ),
+                  ),
                 ],
               ),
         ),

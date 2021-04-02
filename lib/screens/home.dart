@@ -28,7 +28,7 @@ class _HomeState extends State<Home> {
                         color: Colors.purple,
                         size: 40.0,
                       )),
-                  SizedBox(width: 130.0),
+                  SizedBox(width: 160.0),
                   TextButton(onPressed: (){
                     Navigator.pushNamed(context, '/myplans');
                   },
