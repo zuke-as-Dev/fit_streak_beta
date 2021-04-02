@@ -8,17 +8,17 @@ class loading extends StatefulWidget {
 
 class _loadingState extends State<loading> {
 
-  void getdata(){
-   Future.delayed(Duration(seconds : 3),(){
-     Navigator.pushReplacementNamed(context, '/home');
-
-   });
-  }
-  @override
-  void initState() {
-    super.initState();
-    getdata();
-  }
+  // void getdata(){
+  //  Future.delayed(Duration(seconds : 0),(){
+  //    Navigator.pushReplacementNamed(context, '/home');
+  //
+  //  });
+  // }
+  // @override
+  // void initState() {
+  //   super.initState();
+  //   getdata();
+  // }
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -20,9 +20,9 @@ class _HomeState extends State<Home> {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget> [
-                  SizedBox(width: 50.0),
+                  SizedBox(width: 60.0),
                   TextButton(onPressed: (){
-                    Navigator.pushNamed(context, '/menu');
+                    Navigator.pushNamed(context, '/my_profile');
                   },
                       child: Icon(Icons.person,
                         color: Colors.purple,
