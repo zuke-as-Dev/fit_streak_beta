@@ -17,7 +17,9 @@ class _my_profileState extends State<my_profile> {
           IconButton(icon:Icon(Icons.settings,
           size: 30,
           color: Colors.white,),
-              onPressed: (){}),
+              onPressed: (){
+                Navigator.pushNamed(context, '/app_settings');
+              }),
           Padding(
               padding: const EdgeInsets.only(right:10.0),
             child: new IconButton(
@@ -26,7 +28,6 @@ class _my_profileState extends State<my_profile> {
           )
           ),
         ],
-
         ),
         body: Container(
           child: Column(
@@ -43,11 +44,8 @@ class _my_profileState extends State<my_profile> {
                                 ),
                               ),
                       ),
-
-
                       ],
                   ),
-
                   Divider(
                     color: Colors.black,
                   ),
@@ -66,22 +64,41 @@ class _my_profileState extends State<my_profile> {
                             child: IconButton(icon: Icon(Icons.local_fire_department_outlined,
                             size: 50.0,
                             color: Colors.orange[800]),
-                                onPressed: (){}),
+                                onPressed: (){
+                              Navigator.pushNamed(context, '/user_streak');
+                                }),
                           ),
                           Padding(
                             padding: const EdgeInsets.only(left:15.0),
                             child: Text('130'),
                           )
                         ],
+                      ),                      Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(40,0,0,10),
+                            child: IconButton(icon: Icon(Icons.stars,
+                            size: 50.0,
+                            color: Colors.orange[600]),
+                                onPressed: (){
+                                  Navigator.pushNamed(context, '/user_points');
+                                }),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left:57.0),
+                            child: Text('130'),
+                          )
+                        ],
                       ),
                     ],
                   ),
+                  Divider(
+                    color: Colors.black,
+                  ),
                 ],
               ),
-
         ),
-
-
     );
+
   }
 }
