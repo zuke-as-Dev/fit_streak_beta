@@ -1,3 +1,6 @@
+import 'package:fit_streak/myProfile/Help_Screen/Tutorial.dart';
+import 'package:fit_streak/myProfile/Help_Screen/VFX.dart';
+import 'package:fit_streak/myProfile/Help_Screen/detail_working.dart';
 import 'package:fit_streak/myProfile/rate_us.dart';
 import 'package:fit_streak/myProfile/streak.dart';
 import 'package:fit_streak/screens/home.dart';
@@ -13,7 +16,7 @@ import 'package:fit_streak/myProfile/help.dart';
 import 'package:fit_streak/myProfile/settings.dart';
 
 void main() => runApp(MaterialApp(
-  initialRoute: '/',
+  initialRoute: '/my_profile',
   routes: {
     '/':(context) => loading(),
     '/home':(context) => Home(),
@@ -28,5 +31,8 @@ void main() => runApp(MaterialApp(
     '/help':(context) => help(),
     '/points':(context) => user_points(),
     '/rating':(context) => rate_us(),
+    '/tutorial':(context) => user_tuto(),
+    '/VFX':(context) => user_vfx(),
+    '/detail':(context) => detail_working(),
   },
 ));
