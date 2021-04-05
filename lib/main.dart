@@ -16,7 +16,7 @@ import 'package:fit_streak/myProfile/help.dart';
 import 'package:fit_streak/myProfile/settings.dart';
 
 void main() => runApp(MaterialApp(
-  initialRoute: '/my_profile',
+  initialRoute: '/',
   routes: {
     '/':(context) => loading(),
     '/home':(context) => Home(),

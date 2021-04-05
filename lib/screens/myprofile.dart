@@ -115,13 +115,6 @@ class _my_profileState extends State<my_profile> {
               onPressed: (){
                 Navigator.pushNamed(context, '/app_settings');
               }),
-          Padding(
-              padding: const EdgeInsets.only(right:10.0),
-              child: new IconButton(
-                icon: new Icon(Icons.arrow_forward_ios_sharp),
-                onPressed: () => Navigator.of(context).pop(),
-              )
-          ),
         ],
       ),
       body: Container(
