@@ -9,8 +9,8 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  int _selecteditem = 0;
-  var _pages = [my_profile(),camersscreen(),myplans()];
+  int _selecteditem = 1;
+  var _pages = [my_profile(),Camerascreen(),myplans()];
   var _pagecontroller = PageController();
   @override
   Widget build(BuildContext context) {

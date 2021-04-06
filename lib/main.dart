@@ -1,3 +1,5 @@
+
+
 import 'package:fit_streak/myProfile/Help_Screen/Tutorial.dart';
 import 'package:fit_streak/myProfile/Help_Screen/VFX.dart';
 import 'package:fit_streak/myProfile/Help_Screen/detail_working.dart';
@@ -14,7 +16,7 @@ import 'package:fit_streak/myProfile/progress_report.dart';
 import 'package:fit_streak/myProfile/calender.dart';
 import 'package:fit_streak/myProfile/help.dart';
 import 'package:fit_streak/myProfile/settings.dart';
-
+import 'screens/camera_screen.dart';
 void main() => runApp(MaterialApp(
   initialRoute: '/',
   routes: {
@@ -34,5 +36,5 @@ void main() => runApp(MaterialApp(
     '/tutorial':(context) => user_tuto(),
     '/VFX':(context) => user_vfx(),
     '/detail':(context) => detail_working(),
-  },
+    '/camera':(context) => Camerascreen(),    },
 ));
