@@ -111,12 +111,12 @@ class _CamerascreenState extends State<Camerascreen> {
               color: Colors.white,
               size: 24,
             ),
-            label: Text(
-              '${lensDirection.toString().substring(lensDirection.toString().indexOf('.')+1).toUpperCase()}',
-              style: TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.w500,
-              )
+            label: Text( ''
+              // '${lensDirection.toString().substring(lensDirection.toString().indexOf('.')+1).toUpperCase()}',
+              // style: TextStyle(
+              //   color: Colors.white,
+              //   fontWeight: FontWeight.w500,
+              // )
             ),
         ),
       ),
@@ -160,7 +160,7 @@ class _CamerascreenState extends State<Camerascreen> {
               Align(
                 alignment: Alignment.bottomCenter,
                 child: Container(
-                  height: 120,
+                  height: 60,
                   width: double.infinity,
                   padding: EdgeInsets.all(15),
                   color: Colors.black54,

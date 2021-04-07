@@ -16,20 +16,20 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
 
     return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(
-        elevation: 0.0,
-        backgroundColor: Colors.transparent,
-        currentIndex: _selecteditem,
-        onTap: (index){
-          setState(() {
-            _selecteditem = index;
-            _pagecontroller.animateToPage(_selecteditem, duration: Duration(milliseconds: 200), curve: Curves.linear);});},
-        items: <BottomNavigationBarItem> [
-          BottomNavigationBarItem(icon: Icon(Icons.person),label: 'Profile'),
-          BottomNavigationBarItem(icon: Icon(Icons.camera),label: 'camera'),
-          BottomNavigationBarItem(icon: Icon(Icons.article),label: 'Plans'),
-        ],
-      ),
+      // bottomNavigationBar: BottomNavigationBar(
+      //   elevation: 0.0,
+      //   backgroundColor: Colors.transparent,
+      //   currentIndex: _selecteditem,
+      //   onTap: (index){
+      //     setState(() {
+      //       _selecteditem = index;
+      //       _pagecontroller.animateToPage(_selecteditem, duration: Duration(milliseconds: 200), curve: Curves.linear);});},
+      //   items: <BottomNavigationBarItem> [
+      //     BottomNavigationBarItem(icon: Icon(Icons.person),label: 'Profile'),
+      //     BottomNavigationBarItem(icon: Icon(Icons.camera),label: 'camera'),
+      //     BottomNavigationBarItem(icon: Icon(Icons.article),label: 'Plans'),
+      //   ],
+      // ),
       body: Center(
         child: PageView(
           children: _pages,
