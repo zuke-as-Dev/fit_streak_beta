@@ -3,6 +3,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+
 class help extends StatefulWidget {
   @override
   _helpState createState() => _helpState();
@@ -16,94 +17,122 @@ class _helpState extends State<help> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text(
-            'HELP',
+          'HELP',
         ),
       ),
       body:Center(
         child: Column(
-        children: <Widget>[
-          Container(
-            child: RichText(
-              text: TextSpan(
-            style: TextStyle(fontSize: 20,fontStyle: FontStyle.normal),
-                children: [
-                  TextSpan(text:'Please select one of the below options to continue further'),
-                ],
-      ),
+          children: <Widget>[
+            Container(
+              child: Card(
+                color: Colors.blueAccent,
+                child: new Column(
+                  children: <Widget>[
+                    new ListTile(
+                      title: Text('TUTORIAL',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 30.0,
+                          fontStyle: FontStyle.italic,
+                          color: Colors.white,
+                        ),
+
+                      ),
+                      subtitle: TextButton.icon(onPressed: (){
+                        Navigator.pushNamed(context, '/tutorial');
+                      }, icon: Icon(Icons.menu_book),
+                        label: Text('Please click on this to get a brief \n'
+                            'description of the application.',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20.0,
+                          ),
+                        ),
+                      ),
 
 
+                    ),
 
+                  ],),),
             ),
-          ),
-          Container(
-            padding: EdgeInsets.fromLTRB(0, 20, 0, 0),
-        child: Card(
-          color: Colors.blue,
-          child: new Column(
-              children: <Widget>[
-          new ListTile(
-          title: TextButton.icon(onPressed: (){
-        Navigator.pushNamed(context,'/tutorial');
-        },
-          icon: Icon(Icons.menu_book,
-            color: Colors.white,
-            size: 40,),
-          label: Text('Tutorial',
-            style: TextStyle(
-                color: Colors.white,
-                fontSize: 20.0
-            ),),
+            Container(
+              child: Card(
+                color: Colors.blueAccent,
+                child: new Column(
+                  children: <Widget>[
+                    new ListTile(
+                      title: Text('VFX',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 30.0,
+                          fontStyle: FontStyle.italic,
+                          color: Colors.white,
+                        ),
+
+                      ),
+                      subtitle: TextButton.icon(onPressed: (){
+                        Navigator.pushNamed(context, '/VFX');
+                      }, icon: Icon(Icons.menu_book),
+                        label: Text('This contains info-graphic videos to\n'
+                            ' help you understand better.',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20.0,
+                          ),
+                        ),
+                      ),
+
+
+                    ),
+
+                  ],),),
+            ),
+            Container(
+              child: Card(
+                color: Colors.blueAccent,
+                child: new Column(
+                  children: <Widget>[
+                    new ListTile(
+                      title: Text('DETAILED WORKING',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 30.0,
+                          fontStyle: FontStyle.italic,
+                          color: Colors.white,
+                        ),
+
+                      ),
+                      subtitle: TextButton.icon(onPressed: (){
+                        Navigator.pushNamed(context, '/detail');
+                      }, icon: Icon(Icons.menu_book),
+                        label: Text('Select this for a step by step\n'
+                            ' procedure on the working.',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20.0,
+                          ),
+                        ),
+                      ),
+
+
+                    ),
+
+                  ],),),
+            ),
+            Container(
+              padding: EdgeInsets.fromLTRB(0, 40, 0, 0),
+              child: RichText(
+                text: new TextSpan(
+                  text: 'If you are in requirement of further '
+                      'help, Please click this link',
+                  style:new TextStyle(fontSize: 20,color: Colors.blue),
+                  recognizer: new TapGestureRecognizer()
+                    ..onTap = () { launch('https://google.com');
+                    }, ),
+
+              ),
+            ),],
         ),
-
-      ),
-                new Divider(color: Colors.white, indent: 16.0,endIndent: 16.0),
-                new ListTile(
-                  title: TextButton.icon(onPressed: (){
-                    Navigator.pushNamed(context, '/VFX');
-                  },
-                    icon: Icon(Icons.surround_sound_sharp,
-                      color: Colors.white,
-                      size: 40,),
-                    label: Text('VFX',
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20.0
-                      ),),
-                  ),
-
-                ),
-                new Divider(color: Colors.white, indent: 16.0,endIndent: 16.0),
-                new ListTile(
-                  title: TextButton.icon(onPressed: (){
-                    Navigator.pushNamed(context, '/detail');
-                  },
-                    icon: Icon(Icons.book_online_outlined,
-                      color: Colors.white,
-                      size: 40,),
-                    label: Text('Detail Working',
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20.0
-                      ),),
-                  ),
-
-                ),
-
-        ],),),
-    ),
-          Container(
-            padding: EdgeInsets.fromLTRB(0, 40, 0, 0),
-            child: RichText(
-              text: new TextSpan(
-                text: 'If you are in requirement of further help, Please click this link',
-                style:new TextStyle(fontSize: 20,color: Colors.blue),
-                recognizer: new TapGestureRecognizer()
-                  ..onTap = () { launch('https://google.com');
-                  }, ),
-
-          ),
-    ),],
-    ),
       ),
     );
   }

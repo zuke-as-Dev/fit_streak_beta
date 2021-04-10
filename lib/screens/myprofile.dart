@@ -9,6 +9,44 @@ class my_profile extends StatefulWidget {
 class _my_profileState extends State<my_profile> {
   @override
   Widget build(BuildContext context) {
+    final icon1=new Container(
+      child: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.fromLTRB(0,0,0,10),
+            child: IconButton(icon: Icon(Icons.local_fire_department_outlined,
+                size: 50.0,
+                color: Colors.orange[800]),
+                onPressed: (){
+                  Navigator.pushNamed(context, '/user_streak');
+                }),
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(20,10,0,0),
+            child: Text('130'),
+          )
+        ],
+      ),
+    );
+    final icon2= new Container(
+      child: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.fromLTRB(0,0,0,10),
+            child: IconButton(icon: Icon(Icons.stars,
+                size: 50.0,
+                color: Colors.orange[600]),
+                onPressed: (){
+                  Navigator.pushNamed(context, '/user_points');
+                }),
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(20,10,0,0),
+            child: Text('130'),
+          )
+        ],
+      ),
+    );
     var card = new Card(
       color: Colors.blue,
       child: new Column(
@@ -138,50 +176,35 @@ class _my_profileState extends State<my_profile> {
               color: Colors.black,
             ),
 
-            Row(
+            Stack(
               children: [
-                SizedBox(width: 15.0 ),
-                CircleAvatar(
-                  backgroundColor: Colors.transparent,
-                  foregroundImage: AssetImage('assets/fat_simpsons.png'),
-                  radius: 40.0,
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: CircleAvatar(
+                    backgroundColor: Colors.transparent,
+                    foregroundImage: AssetImage('assets/fat_simpsons.png'),
+                    radius: 40.0,
+                  ),
                 ),
-                SizedBox(width: 160),
-                Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(0,0,0,10),
-                      child: IconButton(icon: Icon(Icons.local_fire_department_outlined,
-                          size: 50.0,
-                          color: Colors.orange[800]),
-                          onPressed: (){
-                            Navigator.pushNamed(context, '/user_streak');
-                          }),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left:15.0),
-                      child: Text('130'),
-                    )
-                  ],
+
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: Padding(
+                    padding: const EdgeInsets.only(right:100.0),
+                    child: icon1,
+                  ),
+
                 ),
-                Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(40,0,0,10),
-                      child: IconButton(icon: Icon(Icons.stars,
-                          size: 50.0,
-                          color: Colors.orange[600]),
-                          onPressed: (){
-                            Navigator.pushNamed(context, '/user_points');
-                          }),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left:57.0),
-                      child: Text('130'),
-                    )
-                  ],
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: Padding(
+                    padding: const EdgeInsets.only(right:30.0),
+                    child: icon2,
+                  ),
+
                 ),
               ],
+
             ),
             Divider(
               color: Colors.black,
@@ -196,4 +219,3 @@ class _my_profileState extends State<my_profile> {
 
   }
 }
-
