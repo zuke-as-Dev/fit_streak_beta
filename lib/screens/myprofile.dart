@@ -155,64 +155,66 @@ class _my_profileState extends State<my_profile> {
               }),
         ],
       ),
-      body: Container(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget> [
-            Row(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(10,4,0,0),
-                  child: Text(
-                    'Unfit human',
-                    style: TextStyle(
-                      fontSize: 28.0,
+      body: SingleChildScrollView(
+        child: Container(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget> [
+              Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(10,4,0,0),
+                    child: Text(
+                      'Unfit human',
+                      style: TextStyle(
+                        fontSize: 28.0,
+                      ),
                     ),
                   ),
-                ),
-              ],
-            ),
-            Divider(
-              color: Colors.black,
-            ),
+                ],
+              ),
+              Divider(
+                color: Colors.black,
+              ),
 
-            Stack(
-              children: [
-                Align(
-                  alignment: Alignment.centerLeft,
-                  child: CircleAvatar(
-                    backgroundColor: Colors.transparent,
-                    foregroundImage: AssetImage('assets/fat_simpsons.png'),
-                    radius: 40.0,
-                  ),
-                ),
-
-                Align(
-                  alignment: Alignment.centerRight,
-                  child: Padding(
-                    padding: const EdgeInsets.only(right:100.0),
-                    child: icon1,
+              Stack(
+                children: [
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: CircleAvatar(
+                      backgroundColor: Colors.transparent,
+                      foregroundImage: AssetImage('assets/fat_simpsons.png'),
+                      radius: 40.0,
+                    ),
                   ),
 
-                ),
-                Align(
-                  alignment: Alignment.centerRight,
-                  child: Padding(
-                    padding: const EdgeInsets.only(right:30.0),
-                    child: icon2,
+                  Align(
+                    alignment: Alignment.centerRight,
+                    child: Padding(
+                      padding: const EdgeInsets.only(right:100.0),
+                      child: icon1,
+                    ),
+
                   ),
+                  Align(
+                    alignment: Alignment.centerRight,
+                    child: Padding(
+                      padding: const EdgeInsets.only(right:30.0),
+                      child: icon2,
+                    ),
 
-                ),
-              ],
+                  ),
+                ],
 
-            ),
-            Divider(
-              color: Colors.black,
-            ),
-            SizedBox(height: 1.0,),
+              ),
+              Divider(
+                color: Colors.black,
+              ),
+              SizedBox(height: 1.0,),
 
-            sizedBox,
-          ],
+              sizedBox,
+            ],
+          ),
         ),
       ),
     );
