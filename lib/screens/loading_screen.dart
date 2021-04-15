@@ -7,12 +7,11 @@ class loading extends StatefulWidget {
 }
 
 class _loadingState extends State<loading> {
-
   void getdata(){
-   Future.delayed(Duration(seconds : 3),(){
-     Navigator.pushReplacementNamed(context, '/home');
+    Future.delayed(Duration(seconds : 3),(){
+      Navigator.pushReplacementNamed(context, '/home');
 
-   });
+    });
   }
   @override
   void initState() {
@@ -25,45 +24,45 @@ class _loadingState extends State<loading> {
       backgroundColor: Colors.grey[900],
       body: SafeArea(
         child:Container(
-        decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage('assets/cf.png'),
-              fit: BoxFit.cover,
-            )
+          decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('assets/cf.png'),
+                fit: BoxFit.cover,
+              )
           ),
-        child: Column(
-          // mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.fromLTRB(0, 100, 0, 0),
-              child: CircleAvatar(
-                radius: 90.0,
-                backgroundColor: Colors.transparent,
-                backgroundImage: AssetImage('assets/logo3.png'),
+          child: Column(
+            // mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.fromLTRB(0, 100, 0, 0),
+                child: CircleAvatar(
+                  radius: 90.0,
+                  backgroundColor: Colors.transparent,
+                  backgroundImage: AssetImage('assets/logo3.png'),
+                ),
               ),
-            ),
-            SizedBox(height: 20.0),
-            Center(
-              child: Padding(
-                padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                child: Text(
-                  'Fit Streak',
-                  style: TextStyle(
-                    fontSize: 45.0,
-                    color: Colors.grey,
-                    fontFamily: 'conthrax',
+              SizedBox(height: 20.0),
+              Center(
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                  child: Text(
+                    'Fit Streak',
+                    style: TextStyle(
+                      fontSize: 45.0,
+                      color: Colors.grey,
+                      fontFamily: 'conthrax',
+                    ),
                   ),
                 ),
               ),
-            ),
-            SizedBox(height: 60.0),
-            SpinKitRing(
-              color: Colors.white,
-              size: 110.0,
-              lineWidth: 10.0,
-        ),
-          ],
-        ),
+              SizedBox(height: 60.0),
+              SpinKitRing(
+                color: Colors.white,
+                size: 110.0,
+                lineWidth: 10.0,
+              ),
+            ],
+          ),
         ),
       ),
     );

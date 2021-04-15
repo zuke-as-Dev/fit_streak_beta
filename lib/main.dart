@@ -5,6 +5,7 @@ import 'package:fit_streak/myProfile/Help_Screen/VFX.dart';
 import 'package:fit_streak/myProfile/Help_Screen/detail_working.dart';
 import 'package:fit_streak/myProfile/rate_us.dart';
 import 'package:fit_streak/myProfile/streak.dart';
+import 'package:fit_streak/screens/edituser.dart';
 import 'package:fit_streak/screens/home.dart';
 import 'package:fit_streak/screens/loading_screen.dart';
 import 'package:flutter/material.dart';
@@ -46,6 +47,7 @@ void main() => runApp(MaterialApp(
     '/plan1':(context) => plan1(),
     '/plan2':(context) => plan2(),
     '/plan3':(context) => plan3(),
+    '/edituser':(context) => EditUser(),
 
   },
 ));
