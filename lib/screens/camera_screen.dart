@@ -72,12 +72,14 @@ class _CamerascreenState extends State<Camerascreen> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               FloatingActionButton.extended(
+                backgroundColor: Colors.purple,
                 onPressed: getImage1fromcamera,
                 label: Text('Snap1',),
                 icon: Icon(Icons.camera),
                 tooltip: 'pick Image1 from camera',
               ),
               FloatingActionButton.extended(
+                backgroundColor: Colors.purple,
                 onPressed: getImage2fromcamera,
                 label: Text('Snap2',),
                 icon: Icon(Icons.camera),

@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
-class plan1 extends StatefulWidget {
+class plan2 extends StatefulWidget {
   @override
-  _plan1State createState() => _plan1State();
+  _plan2State createState() => _plan2State();
 }
 
-class _plan1State extends State<plan1> {
+class _plan2State extends State<plan2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.grey,
         appBar: AppBar(
           title: Text(
-            'Plan 1',
+            'plan2',
           ),
         ),
         body: Center(
@@ -19,12 +19,12 @@ class _plan1State extends State<plan1> {
               children: <Widget> [
                 Container(
                     child: Card(
-                      color: Colors.greenAccent,
+                      color: Colors.purpleAccent,
                       child: new Column(
                         children: <Widget>[
                           new ListTile(
                             title: Text(
-                                'Plan 1'
+                                'Plan 2'
                             ),
                           )
                         ],
@@ -33,6 +33,7 @@ class _plan1State extends State<plan1> {
                 ),
               ]),
         )
-    );
+
+    );;
   }
 }
