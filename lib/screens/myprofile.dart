@@ -33,7 +33,13 @@ class _my_profileState extends State<my_profile> {
         children: [
           Padding(
             padding: const EdgeInsets.fromLTRB(0,0,0,10),
-            child: IconButton(icon: Icon(Icons.stars,
+            child: IconButton(icon:
+                /// scale this image in place of point icon sunny
+            // Image.asset(
+            //   'assets/coin logo.png',
+            // ),
+            // iconSize: 100.0,
+            Icon(Icons.stars,
                 size: 50.0,
                 color: Colors.orange[600]),
                 onPressed: (){
