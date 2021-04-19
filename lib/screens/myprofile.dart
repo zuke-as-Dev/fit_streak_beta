@@ -7,6 +7,7 @@ class my_profile extends StatefulWidget {
 }
 
 class _my_profileState extends State<my_profile> {
+  
   @override
   Widget build(BuildContext context) {
     final icon1=new Container(
@@ -32,121 +33,179 @@ class _my_profileState extends State<my_profile> {
       child: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.fromLTRB(0,0,0,10),
-            child: IconButton(icon:
-                /// scale this image in place of point icon sunny
-            // Image.asset(
-            //   'assets/coin logo.png',
+            padding: const EdgeInsets.fromLTRB(20,0,0,0),
+            // child: TextButton(
+            //   onPressed: (){
+            //     Navigator.pushNamed(context, '/points');
+            //   },
+            //   child: CircleAvatar(
+            //       backgroundColor: Colors.transparent,
+            //       backgroundImage:AssetImage('assets/coin logo.png',),
+            //       radius: 30.0,
+            //   // iconSize: 100.0,
+            //   // Icon(Icons.stars,
+            //   //     size: 50.0,
+            //   //     color: Colors.orange[600]),
+            //   //     onPressed: (){
+            //   //       Navigator.pushNamed(context, '/user_points');
+            //   //     }),
+            //   ),
             // ),
-            // iconSize: 100.0,
-            Icon(Icons.stars,
-                size: 50.0,
-                color: Colors.orange[600]),
-                onPressed: (){
-                  Navigator.pushNamed(context, '/user_points');
-                }),
+            // ),
+            child:IconButton(
+              iconSize: 50,
+              onPressed: (){
+                Navigator.pushNamed(context, '/user_points');
+              },
+              icon: Image.asset('assets/coin logo.png',),
+            )
           ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(20,10,0,0),
-            child: Text('130'),
-          )
+              Padding(
+              padding: const EdgeInsets.fromLTRB(20,2,0,0),
+              child: Text('130'),
+          ),
         ],
       ),
     );
-    var card = new Card(
-      color: Colors.blue,
+    var card = new Container(
+      color: Colors.grey[400],
       child: new Column(
         children: <Widget>[
-          new ListTile(
-            title: TextButton.icon(onPressed: (){
-              Navigator.pushNamed(context, '/user_data');
-            },
-              icon: Icon(Icons.edit,
-                color: Colors.white,
-                size: 40,),
-              label: Text('Edit Profile',
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 20.0
-                ),),
-            ),
-
-          ),
-          new Divider(color: Colors.white, indent: 16.0,endIndent: 16.0),
-          new ListTile(
-            title: TextButton.icon(onPressed: (){
-              Navigator.pushNamed(context, '/user_progress');
-            },
-              icon: Icon(Icons.bar_chart_rounded,
-                color: Colors.white,
-                size: 40,),
-              label: Text('Progress Stats',
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 20.0
-                ),),
-            ),
-
-          ),
-          new Divider(color: Colors.white, indent: 16.0,endIndent: 16.0),
-          new ListTile(
-            title: TextButton.icon(onPressed: (){
-              Navigator.pushNamed(context, '/calender');
-            },
-              icon: Padding(
-                padding: const EdgeInsets.fromLTRB(0,0,20,0),
-                child: Icon(Icons.calendar_today,
-                    color: Colors.white,
-                    size: 40.0),
+          Container(
+            child: Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
               ),
-              label: Text('Calendar',
-                style: TextStyle(
+              color: Colors.pinkAccent,
+              child: new ListTile(
+                title: TextButton.icon(onPressed: (){
+                  Navigator.pushNamed(context, '/user_data');
+                },
+                  icon: Icon(Icons.edit,
                     color: Colors.white,
-                    fontSize: 20.0
-                ),),
-            ),
+                    size: 40,),
+                  label: Text('Edit Profile',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20.0
+                    ),),
+                ),
 
-          ),
-          new Divider(color: Colors.white, indent: 16.0,endIndent: 16.0),
-          new ListTile(
-            title: TextButton.icon(onPressed: (){
-              Navigator.pushNamed(context, '/help');
-            },
-              icon: Icon(Icons.info_outline,
-                  color: Colors.white,
-                  size: 40.0),
-              label: Text('Help',
-                  style: TextStyle(fontSize: 20.0,
-                      color: Colors.white)),
+              ),
             ),
-
+            height: 100,
           ),
-          new Divider(color: Colors.white, indent: 16.0,endIndent: 16.0),
-          new ListTile(
-            title: TextButton.icon(onPressed: (){
-              Navigator.pushNamed(context, '/rating');
-            },
-              icon: Icon(Icons.rate_review,
-                color: Colors.white,
-                size: 30,),
-              label: Text('Rate us',
-                style: TextStyle(
+          Container(
+            height: 100,
+            child: Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
+              color: Colors.lightGreenAccent,
+              child: new ListTile(
+                title: TextButton.icon(onPressed: (){
+                  Navigator.pushNamed(context, '/user_progress');
+                },
+                  icon: Icon(Icons.bar_chart_rounded,
                     color: Colors.white,
-                    fontSize: 15.0
-                ),),
-            ),
+                    size: 40,),
+                  label: Text('Progress Stats',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20.0
+                    ),),
+                ),
 
+              ),
+            ),
+          ),
+
+          Container(
+            height: 100,
+            child: Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
+              color: Colors.orangeAccent,
+              child: new ListTile(
+                title: TextButton.icon(onPressed: (){
+                  Navigator.pushNamed(context, '/calender');
+                },
+                  icon: Padding(
+                    padding: const EdgeInsets.fromLTRB(0,0,20,0),
+                    child: Icon(Icons.calendar_today,
+                        color: Colors.white,
+                        size: 40.0),
+                  ),
+                  label: Text('Calendar',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20.0
+                    ),),
+                ),
+
+              ),
+            ),
+          ),
+          Container(
+            height: 100,
+            child: Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
+              color: Colors.redAccent,
+              child: new ListTile(
+                title: TextButton.icon(onPressed: (){
+                  Navigator.pushNamed(context, '/help');
+                },
+                  icon: Icon(Icons.info_outline,
+                      color: Colors.white,
+                      size: 40.0),
+                  label: Text('Help',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(fontSize: 20.0,
+                          color: Colors.white)),
+                ),
+
+              ),
+            ),
+          ),
+          Container(
+            height: 100,
+            child: Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
+              color: Colors.deepPurple[700],
+              child: new ListTile(
+                title: TextButton.icon(onPressed: (){
+                  Navigator.pushNamed(context, '/rating');
+                },
+                  icon: Icon(Icons.rate_review,
+                    color: Colors.white,
+                    size: 30,),
+                  label: Text('Rate us',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 15.0
+                    ),),
+                ),
+
+              ),
+            ),
           ),
 
         ],
       ),
     );
     final sizedBox = new Container(
-      margin: new EdgeInsets.only(left: 10.0, right: 10.0),
-      child: new SizedBox(
-
-        child: card,
-      ),
+        height: 450,
+        child: SingleChildScrollView(
+            child: card),
     );
     return Scaffold(
       appBar: AppBar(
@@ -163,6 +222,7 @@ class _my_profileState extends State<my_profile> {
       ),
       body: SingleChildScrollView(
         child: Container(
+          color: Colors.grey[400],
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget> [
@@ -205,7 +265,7 @@ class _my_profileState extends State<my_profile> {
                   Align(
                     alignment: Alignment.centerRight,
                     child: Padding(
-                      padding: const EdgeInsets.only(right:30.0),
+                      padding: const EdgeInsets.only(right:10.0),
                       child: icon2,
                     ),
 

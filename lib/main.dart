@@ -29,6 +29,7 @@ void main() => runApp(MaterialApp(
   routes: {
     '/':(context) => loading(),
     '/home':(context) => Home(),
+    '/edituser':(context) => EditUser(),
     '/my_profile':(context) => my_profile(),
     '/myplans':(context) => myplans(),
     '/user_data':(context) => user_data(),
