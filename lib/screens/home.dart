@@ -18,8 +18,8 @@ class _HomeState extends State<Home> {
 
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
-        elevation: 0.0,
-        backgroundColor: Colors.transparent,
+        elevation: 1.0,
+        backgroundColor: Colors.grey[850],
         currentIndex: _selecteditem,
         onTap: (index){
           setState(() {

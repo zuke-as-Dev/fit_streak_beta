@@ -7,7 +7,7 @@ class my_profile extends StatefulWidget {
 }
 
 class _my_profileState extends State<my_profile> {
-  
+
   @override
   Widget build(BuildContext context) {
     final icon1=new Container(
@@ -24,7 +24,10 @@ class _my_profileState extends State<my_profile> {
           ),
           Padding(
             padding: const EdgeInsets.fromLTRB(20,10,0,0),
-            child: Text('130'),
+            child: Text('130',
+                style:TextStyle(
+                    color: Colors.white
+                ) ),
           )
         ],
       ),
@@ -33,36 +36,39 @@ class _my_profileState extends State<my_profile> {
       child: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.fromLTRB(20,0,0,0),
-            // child: TextButton(
-            //   onPressed: (){
-            //     Navigator.pushNamed(context, '/points');
-            //   },
-            //   child: CircleAvatar(
-            //       backgroundColor: Colors.transparent,
-            //       backgroundImage:AssetImage('assets/coin logo.png',),
-            //       radius: 30.0,
-            //   // iconSize: 100.0,
-            //   // Icon(Icons.stars,
-            //   //     size: 50.0,
-            //   //     color: Colors.orange[600]),
-            //   //     onPressed: (){
-            //   //       Navigator.pushNamed(context, '/user_points');
-            //   //     }),
-            //   ),
-            // ),
-            // ),
-            child:IconButton(
-              iconSize: 50,
-              onPressed: (){
-                Navigator.pushNamed(context, '/user_points');
-              },
-              icon: Image.asset('assets/coin logo.png',),
-            )
+              padding: const EdgeInsets.fromLTRB(20,0,0,0),
+              // child: TextButton(
+              //   onPressed: (){
+              //     Navigator.pushNamed(context, '/points');
+              //   },
+              //   child: CircleAvatar(
+              //       backgroundColor: Colors.transparent,
+              //       backgroundImage:AssetImage('assets/coin logo.png',),
+              //       radius: 30.0,
+              //   // iconSize: 100.0,
+              //   // Icon(Icons.stars,
+              //   //     size: 50.0,
+              //   //     color: Colors.orange[600]),
+              //   //     onPressed: (){
+              //   //       Navigator.pushNamed(context, '/user_points');
+              //   //     }),
+              //   ),
+              // ),
+              // ),
+              child:IconButton(
+                iconSize: 45,
+                onPressed: (){
+                  Navigator.pushNamed(context, '/user_points');
+                },
+                icon: Image.asset('assets/coin logo.png',),
+              )
           ),
-              Padding(
-              padding: const EdgeInsets.fromLTRB(20,2,0,0),
-              child: Text('130'),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(20,2,0,0),
+            child: Text('130',
+              style: TextStyle(
+                color: Colors.white,
+              ),),
           ),
         ],
       ),
@@ -72,14 +78,28 @@ class _my_profileState extends State<my_profile> {
       child: new Column(
         children: <Widget>[
           Container(
+            decoration: BoxDecoration(
+              gradient: new LinearGradient(
+                colors: <Color>[
+                  Colors.teal.withOpacity(1.0),
+                  Colors.blue[200].withOpacity(1.0),
+                  Colors.purple.withOpacity(1.0),
+                ],
+                stops: [
+                  0.0,
+                  0.5,
+                  1.0,
+                ],
+              ),
+            ) ,
             child: Card(
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10),
               ),
-              color: Colors.pinkAccent,
+              color: Colors.grey[700],
               child: new ListTile(
                 title: TextButton.icon(onPressed: (){
-                  Navigator.pushNamed(context, '/user_data');
+                  Navigator.pushNamed(context, '/edituser');
                 },
                   icon: Icon(Icons.edit,
                     color: Colors.white,
@@ -97,12 +117,26 @@ class _my_profileState extends State<my_profile> {
             height: 100,
           ),
           Container(
+            decoration: BoxDecoration(
+              gradient: new LinearGradient(
+                colors: <Color>[
+                  Colors.teal.withOpacity(1.0),
+                  Colors.blue[200].withOpacity(1.0),
+                  Colors.purple.withOpacity(1.0),
+                ],
+                stops: [
+                  0.0,
+                  0.5,
+                  1.0,
+                ],
+              ),
+            ) ,
             height: 100,
             child: Card(
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10),
               ),
-              color: Colors.lightGreenAccent,
+              color: Colors.grey[700],
               child: new ListTile(
                 title: TextButton.icon(onPressed: (){
                   Navigator.pushNamed(context, '/user_progress');
@@ -123,12 +157,26 @@ class _my_profileState extends State<my_profile> {
           ),
 
           Container(
+            decoration: BoxDecoration(
+              gradient: new LinearGradient(
+                colors: <Color>[
+                  Colors.teal.withOpacity(1.0),
+                  Colors.blue[200].withOpacity(1.0),
+                  Colors.purple.withOpacity(1.0),
+                ],
+                stops: [
+                  0.0,
+                  0.5,
+                  1.0,
+                ],
+              ),
+            ) ,
             height: 100,
             child: Card(
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10),
               ),
-              color: Colors.orangeAccent,
+              color: Colors.grey[700],
               child: new ListTile(
                 title: TextButton.icon(onPressed: (){
                   Navigator.pushNamed(context, '/calender');
@@ -151,12 +199,26 @@ class _my_profileState extends State<my_profile> {
             ),
           ),
           Container(
+            decoration: BoxDecoration(
+              gradient: new LinearGradient(
+                colors: <Color>[
+                  Colors.teal.withOpacity(1.0),
+                  Colors.blue[200].withOpacity(1.0),
+                  Colors.purple.withOpacity(1.0),
+                ],
+                stops: [
+                  0.0,
+                  0.5,
+                  1.0,
+                ],
+              ),
+            ) ,
             height: 100,
             child: Card(
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10),
               ),
-              color: Colors.redAccent,
+              color: Colors.grey[700],
               child: new ListTile(
                 title: TextButton.icon(onPressed: (){
                   Navigator.pushNamed(context, '/help');
@@ -174,12 +236,26 @@ class _my_profileState extends State<my_profile> {
             ),
           ),
           Container(
+            decoration: BoxDecoration(
+              gradient: new LinearGradient(
+                colors: <Color>[
+                  Colors.teal.withOpacity(1.0),
+                  Colors.blue[200].withOpacity(1.0),
+                  Colors.purple.withOpacity(1.0),
+                ],
+                stops: [
+                  0.0,
+                  0.5,
+                  1.0,
+                ],
+              ),
+            ) ,
             height: 100,
             child: Card(
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10),
               ),
-              color: Colors.deepPurple[700],
+              color: Colors.grey[700],
               child: new ListTile(
                 title: TextButton.icon(onPressed: (){
                   Navigator.pushNamed(context, '/rating');
@@ -203,12 +279,12 @@ class _my_profileState extends State<my_profile> {
       ),
     );
     final sizedBox = new Container(
-        height: 450,
-        child: SingleChildScrollView(
-            child: card),
+      child: SingleChildScrollView(
+          child: card),
     );
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.deepPurple,
         title: Text('My Profile'),
         automaticallyImplyLeading: false,
         actions: <Widget>[
@@ -222,7 +298,7 @@ class _my_profileState extends State<my_profile> {
       ),
       body: SingleChildScrollView(
         child: Container(
-          color: Colors.grey[400],
+          color: Colors.grey[850],
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget> [
@@ -233,7 +309,8 @@ class _my_profileState extends State<my_profile> {
                     child: Text(
                       'Unfit human',
                       style: TextStyle(
-                        fontSize: 28.0,
+                          fontSize: 28.0,
+                          color: Colors.white
                       ),
                     ),
                   ),

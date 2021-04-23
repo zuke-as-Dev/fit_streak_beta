@@ -14,18 +14,34 @@ class _helpState extends State<help> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.grey[850],
       appBar: AppBar(
+        backgroundColor: Colors.deepPurple,
         title: Text(
           'HELP',
         ),
       ),
-      body:Center(
+      body:SingleChildScrollView(
         child: Column(
           children: <Widget>[
+            SizedBox(height: 20,),
             Container(
+              decoration: BoxDecoration(
+                gradient: new LinearGradient(
+                  colors: <Color>[
+                    Colors.teal.withOpacity(1.0),
+                    Colors.blue[200].withOpacity(1.0),
+                    Colors.purple.withOpacity(1.0),
+                  ],
+                  stops: [
+                    0.0,
+                    0.5,
+                    1.0,
+                  ],
+                ),
+              ) ,
               child: Card(
-                color: Colors.blueAccent,
+                color: Colors.grey[700],
                 child: new Column(
                   children: <Widget>[
                     new ListTile(
@@ -55,9 +71,24 @@ class _helpState extends State<help> {
 
                   ],),),
             ),
+            SizedBox(height: 20,),
             Container(
+              decoration: BoxDecoration(
+                gradient: new LinearGradient(
+                  colors: <Color>[
+                    Colors.teal.withOpacity(1.0),
+                    Colors.blue[200].withOpacity(1.0),
+                    Colors.purple.withOpacity(1.0),
+                  ],
+                  stops: [
+                    0.0,
+                    0.5,
+                    1.0,
+                  ],
+                ),
+              ) ,
               child: Card(
-                color: Colors.blueAccent,
+                color: Colors.grey[700],
                 child: new Column(
                   children: <Widget>[
                     new ListTile(
@@ -87,9 +118,24 @@ class _helpState extends State<help> {
 
                   ],),),
             ),
+            SizedBox(height: 20,),
             Container(
+              decoration: BoxDecoration(
+                gradient: new LinearGradient(
+                  colors: <Color>[
+                    Colors.teal.withOpacity(1.0),
+                    Colors.blue[200].withOpacity(1.0),
+                    Colors.purple.withOpacity(1.0),
+                  ],
+                  stops: [
+                    0.0,
+                    0.5,
+                    1.0,
+                  ],
+                ),
+              ) ,
               child: Card(
-                color: Colors.blueAccent,
+                color: Colors.grey[700],
                 child: new Column(
                   children: <Widget>[
                     new ListTile(
@@ -113,25 +159,12 @@ class _helpState extends State<help> {
                           ),
                         ),
                       ),
-
-
                     ),
-
-                  ],),),
-            ),
-            Container(
-              padding: EdgeInsets.fromLTRB(0, 40, 0, 0),
-              child: RichText(
-                text: new TextSpan(
-                  text: 'If you are in requirement of further '
-                      'help, Please click this link',
-                  style:new TextStyle(fontSize: 20,color: Colors.blue),
-                  recognizer: new TapGestureRecognizer()
-                    ..onTap = () { launch('https://google.com');
-                    }, ),
-
+                  ],
+                ),
               ),
-            ),],
+            ),
+          ],
         ),
       ),
     );

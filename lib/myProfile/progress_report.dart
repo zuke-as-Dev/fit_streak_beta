@@ -1,3 +1,4 @@
+import 'package:fit_streak/progress/chart.dart';
 import 'package:flutter/material.dart';
 class user_progress extends StatefulWidget {
   @override
@@ -13,6 +14,10 @@ class _user_progressState extends State<user_progress> {
         title: Text(
             'user progress',
         ),
+      ),
+      body: Container(
+
+          child: Graph()
       ),
 
     );;

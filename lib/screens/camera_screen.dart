@@ -35,14 +35,16 @@ class _CamerascreenState extends State<Camerascreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[850],
       appBar: AppBar(
+        backgroundColor: Colors.deepPurple,
         title: Text('Camera screen'),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Center(
-            child: Text('Image Picker for snap',style: TextStyle(fontSize: 20.0),),
+            child: Text('Image Picker for snap',style: TextStyle(fontSize: 20.0,color: Colors.white54),),
           ),
           Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -50,10 +52,11 @@ class _CamerascreenState extends State<Camerascreen> {
               Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Container(
+
                   width: MediaQuery.of(context).size.width,
                   height: 200.0,
                   child: Center(
-                    child: _image1 == null ? Text("NO image1 found"): Image.file(_image1),
+                    child: _image1 == null ? Text("NO image1 found",style: TextStyle(color: Colors.white54),): Image.file(_image1),
                   ),
                 ),
               ),              Padding(
@@ -62,7 +65,7 @@ class _CamerascreenState extends State<Camerascreen> {
                   width: MediaQuery.of(context).size.width,
                   height: 200.0,
                   child: Center(
-                    child: _image2 == null ? Text("NO image2 found"): Image.file(_image2),
+                    child: _image2 == null ? Text("NO image2 found",style: TextStyle(color: Colors.white54)): Image.file(_image2),
                   ),
                 ),
               ),

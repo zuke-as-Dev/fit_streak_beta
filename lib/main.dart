@@ -36,7 +36,7 @@ void main() => runApp(MaterialApp(
     '/user_streak':(context) => user_streak(),
     '/user_points':(context) => user_points(),
     '/user_progress':(context) => user_progress(),
-    '/calender':(context) => calender(),
+    '/calender':(context) => Calendar(),
     '/app_settings':(context) => settings(),
     '/help':(context) => help(),
     '/points':(context) => user_points(),
@@ -49,6 +49,8 @@ void main() => runApp(MaterialApp(
     '/plan2':(context) => plan2(),
     '/plan3':(context) => plan3(),
     '/edituser':(context) => EditUser(),
+
+
 
   },
 ));
