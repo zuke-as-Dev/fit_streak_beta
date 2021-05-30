@@ -1,5 +1,6 @@
 
 
+import 'package:fit_streak/my%20Plans/Upgrade.dart';
 import 'package:fit_streak/myProfile/Help_Screen/Tutorial.dart';
 import 'package:fit_streak/myProfile/Help_Screen/VFX.dart';
 import 'package:fit_streak/myProfile/Help_Screen/detail_working.dart';
@@ -17,6 +18,7 @@ import 'package:fit_streak/myProfile/progress_report.dart';
 import 'package:fit_streak/myProfile/calender.dart';
 import 'package:fit_streak/myProfile/help.dart';
 import 'package:fit_streak/myProfile/settings.dart';
+import 'package:path/path.dart';
 import 'my Plans/plan1.dart';
 import 'my Plans/plan2.dart';
 import 'my Plans/plan3.dart';
@@ -49,6 +51,7 @@ void main() => runApp(MaterialApp(
     '/plan2':(context) => plan2(),
     '/plan3':(context) => plan3(),
     '/edituser':(context) => EditUser(),
+    '/upgrade':(context) => upgrade()
 
 
 
