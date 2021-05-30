@@ -74,24 +74,24 @@ class _my_profileState extends State<my_profile> {
       ),
     );
     var card = new Container(
-      color: Colors.grey[400],
+      color: Colors.transparent,
       child: new Column(
         children: <Widget>[
           Container(
-            decoration: BoxDecoration(
-              gradient: new LinearGradient(
-                colors: <Color>[
-                  Colors.teal.withOpacity(1.0),
-                  Colors.blue[200].withOpacity(1.0),
-                  Colors.purple.withOpacity(1.0),
-                ],
-                stops: [
-                  0.0,
-                  0.5,
-                  1.0,
-                ],
-              ),
-            ) ,
+            // decoration: BoxDecoration(
+            //   // gradient: new LinearGradient(
+            //   //   colors: <Color>[
+            //   //     Colors.teal.withOpacity(1.0),
+            //   //     Colors.blue[200].withOpacity(1.0),
+            //   //     Colors.purple.withOpacity(1.0),
+            //   //   ],
+            //   //   stops: [
+            //   //     0.0,
+            //   //     0.5,
+            //   //     1.0,
+            //   //   ],
+            //   // ),
+            // ) ,
             child: Card(
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10),
@@ -117,20 +117,20 @@ class _my_profileState extends State<my_profile> {
             height: 100,
           ),
           Container(
-            decoration: BoxDecoration(
-              gradient: new LinearGradient(
-                colors: <Color>[
-                  Colors.teal.withOpacity(1.0),
-                  Colors.blue[200].withOpacity(1.0),
-                  Colors.purple.withOpacity(1.0),
-                ],
-                stops: [
-                  0.0,
-                  0.5,
-                  1.0,
-                ],
-              ),
-            ) ,
+            // decoration: BoxDecoration(
+            //   gradient: new LinearGradient(
+            //     colors: <Color>[
+            //       Colors.teal.withOpacity(1.0),
+            //       Colors.blue[200].withOpacity(1.0),
+            //       Colors.purple.withOpacity(1.0),
+            //     ],
+            //     stops: [
+            //       0.0,
+            //       0.5,
+            //       1.0,
+            //     ],
+            //   ),
+            // ) ,
             height: 100,
             child: Card(
               shape: RoundedRectangleBorder(
@@ -157,20 +157,20 @@ class _my_profileState extends State<my_profile> {
           ),
 
           Container(
-            decoration: BoxDecoration(
-              gradient: new LinearGradient(
-                colors: <Color>[
-                  Colors.teal.withOpacity(1.0),
-                  Colors.blue[200].withOpacity(1.0),
-                  Colors.purple.withOpacity(1.0),
-                ],
-                stops: [
-                  0.0,
-                  0.5,
-                  1.0,
-                ],
-              ),
-            ) ,
+            // decoration: BoxDecoration(
+            //   gradient: new LinearGradient(
+            //     colors: <Color>[
+            //       Colors.teal.withOpacity(1.0),
+            //       Colors.blue[200].withOpacity(1.0),
+            //       Colors.purple.withOpacity(1.0),
+            //     ],
+            //     stops: [
+            //       0.0,
+            //       0.5,
+            //       1.0,
+            //     ],
+            //   ),
+            // ) ,
             height: 100,
             child: Card(
               shape: RoundedRectangleBorder(
@@ -199,20 +199,20 @@ class _my_profileState extends State<my_profile> {
             ),
           ),
           Container(
-            decoration: BoxDecoration(
-              gradient: new LinearGradient(
-                colors: <Color>[
-                  Colors.teal.withOpacity(1.0),
-                  Colors.blue[200].withOpacity(1.0),
-                  Colors.purple.withOpacity(1.0),
-                ],
-                stops: [
-                  0.0,
-                  0.5,
-                  1.0,
-                ],
-              ),
-            ) ,
+            // decoration: BoxDecoration(
+            //   gradient: new LinearGradient(
+            //     colors: <Color>[
+            //       Colors.teal.withOpacity(1.0),
+            //       Colors.blue[200].withOpacity(1.0),
+            //       Colors.purple.withOpacity(1.0),
+            //     ],
+            //     stops: [
+            //       0.0,
+            //       0.5,
+            //       1.0,
+            //     ],
+            //   ),
+            // ) ,
             height: 100,
             child: Card(
               shape: RoundedRectangleBorder(
@@ -236,20 +236,20 @@ class _my_profileState extends State<my_profile> {
             ),
           ),
           Container(
-            decoration: BoxDecoration(
-              gradient: new LinearGradient(
-                colors: <Color>[
-                  Colors.teal.withOpacity(1.0),
-                  Colors.blue[200].withOpacity(1.0),
-                  Colors.purple.withOpacity(1.0),
-                ],
-                stops: [
-                  0.0,
-                  0.5,
-                  1.0,
-                ],
-              ),
-            ) ,
+            // decoration: BoxDecoration(
+            //   gradient: new LinearGradient(
+            //     colors: <Color>[
+            //       Colors.teal.withOpacity(1.0),
+            //       Colors.blue[200].withOpacity(1.0),
+            //       Colors.purple.withOpacity(1.0),
+            //     ],
+            //     stops: [
+            //       0.0,
+            //       0.5,
+            //       1.0,
+            //     ],
+            //   ),
+            // ) ,
             height: 100,
             child: Card(
               shape: RoundedRectangleBorder(
